@@ -1,0 +1,29 @@
+# Data configuration
+data_yaml_path: "data/coco.yaml"
+num_classes: 80
+img_size: 640
+batch_size: 16
+
+# Training configuration
+teacher_epochs: 100
+distillation_epochs: 50
+learning_rate: 0.001
+
+# Pruning configuration
+pruning_iterations: 5
+target_sparsity: 0.7
+fine_tune_epochs: 5
+
+# Quantization configuration
+calibration_samples: 1000
+
+# Deployment configuration
+hardware_profile: "jetson_nano"
+input_shape: [1, 3, 640, 640]
+
+# General configuration
+output_dir: "runs/pipeline"
+checkpoint_dir: "checkpoints"
+device: "cuda"  # or "cpu"
+num_workers: 4
+seed: 42 
